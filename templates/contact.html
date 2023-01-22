@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+
+{% block tittle %}Contact US{% endblock tittle %}
+
+{% block body %}
+
+<img src="/static/img/contactus.jpg" class="container-fluid my-0 mx-0 px-0" alt="" srcset="">
+
+<form method="post" action="contact" class="row g-3 mx-5 my-2">
+    {% csrf_token %}
+    <div class="col-md-6">
+      <label for="firstname" class="form-label">First Name: </label>
+      <input type="text" name ="firstname" class="form-control" id="firstname">
+    </div>
+    <div class="col-md-6">
+      <label for="lastname" class="form-label">Last Name: </label>
+      <input type="text" class="form-control" name = "lastname" id="lastname">
+    </div>
+    <div class="col-md-6">
+      <label for="inputEmail4" class="form-label">Email: </label>
+      <input type="email" class="form-control" name = "email" id="inputEmail4">
+    </div>
+    <div class="col-md-6">
+      <label for="phone" class="form-label">Mobile number: </label>
+      <input type="phone" class="form-control" name ="phone" id="phone">
+    </div>
+    
+    <div class="col-12 py-3">
+      <label for="reason" class="form-label">For what you want to contact me..</label>
+      <input type="text-box" class="form-control" name = "reason" id="reason" placeholder="Describe">
+    </div>
+    
+    <div class="col-12">
+        <button type="Submit" class="btn btn-primary">Submit</button>
+    </div>
+  </form>
+
+
+
+
+{% endblock body %}

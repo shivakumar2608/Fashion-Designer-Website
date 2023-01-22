@@ -1,0 +1,68 @@
+{% extends 'base.html' %}
+
+{% block tittle %}SignIn{% endblock tittle %}
+
+{% block body %}
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.88.1">
+    <title>Signin   </title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/sign-in/">
+
+    
+
+
+    <!-- Favicons -->
+<link rel="apple-touch-icon" href="/static/img/signin.jpeg" sizes="180x180">
+<link rel="icon" href="/static/img/signin.jpeg" sizes="32x32" type="image/png">
+<link rel="icon" href="/static/img/signin.jpeg" sizes="16x16" type="image/png">
+<link rel="manifest" href="/docs/5.1/assets/img/favicons/manifest.json">
+<link rel="mask-icon" href="/static/img/signin.jpeg" color="#7952b3">
+<link rel="icon" href="/static/img/signin.jpeg">
+<meta name="theme-color" content="#7952b3">
+
+
+<link rel="stylesheet" href="style.css">
+    
+    <!-- Custom styles for this template -->
+   
+  </head>
+  <body class="text-center">
+    
+<main class="form-signin">
+  <form method = "POST" action= "signin">
+    {% csrf_token %}
+    <img class="mb-4 my-5" src="/static/img/signin.jpeg" alt="" width="72" height="57">
+    <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
+
+    <div class="form-floating mx-5">
+      <input type="text" class="form-control my-2" id="floatingInput" name="username" placeholder="name@example.com">
+      <label for="floatingInput">Username</label>
+    </div>
+    <div class="form-floating  mx-5">
+      <input type="password" class="form-control my-2" id="floatingPassword" name="password" placeholder="Password">
+      <label for="floatingPassword">Password</label>
+    </div>
+
+    <div class="checkbox mb-3">
+      <label>
+        <input type="checkbox" value="remember-me"> Remember me
+      </label>
+    </div>
+    <button class="w-40 btn btn-lg mx-5 btn-primary" type="submit">Sign in</button>
+    
+  </form>
+</main>
+
+
+    
+  </body>
+</html>
+{% endblock body %}
